@@ -1,2 +1,2 @@
 # Tech-Module
-My Journey with SoftUni began here
+My Journey with SoftUni began here.
