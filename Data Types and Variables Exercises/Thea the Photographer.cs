@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,13 +11,13 @@ namespace Thea_the_Photographer
         static void Main(string[] args)
         {
 
-            int allpics = int.Parse(Console.ReadLine());
-            int filtertime = int.Parse(Console.ReadLine());
-            int filterfactor = int.Parse(Console.ReadLine());
-            int uploadtime = int.Parse(Console.ReadLine());
+            double allpics = double.Parse(Console.ReadLine());
+            double filtertime = double.Parse(Console.ReadLine());
+            double filterfactor = double.Parse(Console.ReadLine());
+            double uploadtime = double.Parse(Console.ReadLine());
 
-            int useful = allpics * (filterfactor/100);
-            int totaltime = allpics * filtertime + useful * uploadtime;
+            double useful = Math.Ceiling(allpics * filterfactor / 100);
+            double totaltime = allpics * filtertime + useful * uploadtime;
 
             TimeSpan time = TimeSpan.FromSeconds(totaltime);
             Console.WriteLine("{0:d\\:hh\\:mm\\:ss}", time);
